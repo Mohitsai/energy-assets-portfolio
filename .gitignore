@@ -1,0 +1,60 @@
+# Python cache and build
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Virtual envs and local Python settings
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.python-version
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local data, artifacts, and reports
+local/artifacts/
+local/data/
+*.parquet
+*.feather
+*.arrow
+*.csv
+*.jsonl
+
+# If you want to version only curated gold outputs, keep the line above and unignore specific files like this:
+# !local/data/gold/baseline_report.json
+# !local/data/gold/features_v1_preview.json
+# !local/data/gold/rl_report.json
+# !local/data/gold/models/ppo_portfolio_model.zip
+
+# Model and large binaries
+*.zip
+*.pkl
+*.pt
+*.onnx
+
+# Compiled notebooks
+.ipynb_checkpoints/
+
+# AWS, dotenv, and private configs
+.aws/
+.env
+*.pem
+*.key
+*.crt
+
+# Optional: ignore the rendered file tree if regenerated
+file_tree.txt

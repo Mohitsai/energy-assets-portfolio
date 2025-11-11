@@ -1,0 +1,8 @@
+boto3
+pandas
+pyarrow
+yfinance
+pyyaml
+numpy
+gymnasium
+stable_baselines3

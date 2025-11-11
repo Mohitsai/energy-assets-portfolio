@@ -1,0 +1,34 @@
+version: 1
+storage:
+  backend: "local"
+  local_root: "local/data"
+  bucket: "s3://energy-portfolio-data-agentic-trader"
+  bronze_prefix: "bronze/prices/provider=yahoo"
+  silver_prefix: "silver/daily_prices"
+  gold_prefix: "gold"
+calendar:
+  trading_days: "US"
+providers:
+  yahoo:
+    type: "price"
+    module: "adapters.yahoo"
+assets:
+  - code: "USO"
+    display_name: "Crude Oil ETF"
+    provider: "yahoo"
+    fields: ["date","open","high","low","close","adj_close","volume"]
+  - code: "UNG"
+    display_name: "Nat Gas ETF"
+    provider: "yahoo"
+    fields: ["date","open","high","low","close","adj_close","volume"]
+  - code: "KRBN"
+    display_name: "Carbon Credits ETF"
+    provider: "yahoo"
+    fields: ["date","open","high","low","close","adj_close","volume"]
+  - code: "XLE"
+    display_name: "Energy Sector ETF"
+    provider: "yahoo"
+    fields: ["date","open","high","low","close","adj_close","volume"]
+backfill:
+  start: "2020-01-01"
+  end: "2025-11-10"
